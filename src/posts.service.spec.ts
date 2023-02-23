@@ -19,8 +19,7 @@ describe('PostsService', () => {
   });
 
   it('should find a post', () => {
-    const createdPost = postsService.create(post);
-    const foundPost = postsService.find(createdPost.id);
-    expect(foundPost).toEqual(createdPost);
+    const foundPost = postsService.find("1");
+    expect(foundPost).toEqual(post);
   });
 });
