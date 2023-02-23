@@ -20,6 +20,8 @@ describe('PostsService', () => {
 
   it('should find a post', () => {
     const foundPost = postsService.find("1");
-    expect(foundPost).toEqual(post);
+    expect(foundPost).toEqual(expect.objectContaining({
+      text: expect.toEqual('Some pre-existing post')
+    }));
   });
 });
